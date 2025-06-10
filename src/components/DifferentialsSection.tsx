@@ -7,59 +7,53 @@ const DifferentialsSection = () => {
     {
       icon: Zap,
       title: 'Implementação Rápida',
-      description: 'Soluções de IA funcionando em até 48 horas, sem complicações técnicas.'
+      description: 'Soluções funcionando em até 48 horas, sem complicações técnicas.'
     },
     {
       icon: Settings,
       title: 'Personalização Total',
-      description: 'Cada projeto é desenvolvido sob medida para as necessidades específicas do seu negócio.'
+      description: 'Cada projeto desenvolvido sob medida para as necessidades específicas.'
     },
     {
       icon: Users,
-      title: 'Integração com GPT',
-      description: 'Utilizamos as mais avançadas tecnologias de IA, incluindo modelos GPT de última geração.'
+      title: 'Integração GPT',
+      description: 'Utilizamos as mais avançadas tecnologias de IA e modelos GPT.'
     },
     {
       icon: Trophy,
       title: 'Agência #1 do Brasil',
-      description: 'Reconhecida como líder em automação inteligente e soluções de IA para empresas.'
+      description: 'Reconhecida como líder em automação inteligente para empresas.'
     }
   ];
 
   return (
-    <section id="diferenciais" className="py-16 lg:py-24 bg-gradient-to-br from-ai-blue-50 to-ai-purple-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Por que escolher a <span className="text-gradient">AgênciaIA</span>?
+    <section id="sobre" className="section-spacing bg-secondary/50">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+            Por que escolher a AgênciaIA?
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground leading-relaxed">
             Somos especialistas em transformar ideias em soluções inteligentes que realmente funcionam.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {differentials.map((differential, index) => (
-            <Card key={index} className="text-center border-0 shadow-lg hover-lift bg-background/80 backdrop-blur-sm">
+            <Card key={index} className="minimal-card text-center">
               <CardContent className="p-8">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-r from-ai-blue-500 to-ai-purple-500 flex items-center justify-center">
-                  <differential.icon className="w-8 h-8 text-white" />
+                <div className="w-12 h-12 mx-auto mb-6 rounded-lg bg-foreground flex items-center justify-center">
+                  <differential.icon className="w-6 h-6 text-background" />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-foreground">
+                <h3 className="text-lg font-semibold mb-4 text-foreground">
                   {differential.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-sm">
                   {differential.description}
                 </p>
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center px-6 py-3 bg-ai-cyan-100 text-ai-cyan-900 rounded-full text-lg font-medium">
-            🚀 Projeto em expansão – Seja nosso parceiro estratégico
-          </div>
         </div>
       </div>
     </section>

@@ -8,32 +8,32 @@
 @layer base {
   :root {
     --background: 255 255 255;
-    --foreground: 15 23 42;
+    --foreground: 23 23 23;
 
     --card: 255 255 255;
-    --card-foreground: 15 23 42;
+    --card-foreground: 23 23 23;
 
     --popover: 255 255 255;
-    --popover-foreground: 15 23 42;
+    --popover-foreground: 23 23 23;
 
-    --primary: 37 99 235;
-    --primary-foreground: 248 250 252;
+    --primary: 23 23 23;
+    --primary-foreground: 255 255 255;
 
-    --secondary: 241 245 249;
-    --secondary-foreground: 15 23 42;
+    --secondary: 245 245 245;
+    --secondary-foreground: 23 23 23;
 
-    --muted: 241 245 249;
-    --muted-foreground: 100 116 139;
+    --muted: 245 245 245;
+    --muted-foreground: 115 115 115;
 
-    --accent: 241 245 249;
-    --accent-foreground: 15 23 42;
+    --accent: 245 245 245;
+    --accent-foreground: 23 23 23;
 
     --destructive: 239 68 68;
     --destructive-foreground: 248 250 252;
 
-    --border: 226 232 240;
-    --input: 226 232 240;
-    --ring: 37 99 235;
+    --border: 229 229 229;
+    --input: 229 229 229;
+    --ring: 23 23 23;
 
     --radius: 0.5rem;
 
@@ -48,42 +48,42 @@
   }
 
   .dark {
-    --background: 2 6 23;
-    --foreground: 248 250 252;
+    --background: 23 23 23;
+    --foreground: 255 255 255;
 
-    --card: 2 6 23;
-    --card-foreground: 248 250 252;
+    --card: 23 23 23;
+    --card-foreground: 255 255 255;
 
-    --popover: 2 6 23;
-    --popover-foreground: 248 250 252;
+    --popover: 23 23 23;
+    --popover-foreground: 255 255 255;
 
-    --primary: 59 130 246;
-    --primary-foreground: 15 23 42;
+    --primary: 255 255 255;
+    --primary-foreground: 23 23 23;
 
-    --secondary: 30 41 59;
-    --secondary-foreground: 248 250 252;
+    --secondary: 38 38 38;
+    --secondary-foreground: 255 255 255;
 
-    --muted: 30 41 59;
-    --muted-foreground: 148 163 184;
+    --muted: 38 38 38;
+    --muted-foreground: 163 163 163;
 
-    --accent: 30 41 59;
-    --accent-foreground: 248 250 252;
+    --accent: 38 38 38;
+    --accent-foreground: 255 255 255;
 
     --destructive: 185 28 28;
     --destructive-foreground: 248 250 252;
 
-    --border: 30 41 59;
-    --input: 30 41 59;
-    --ring: 59 130 246;
+    --border: 38 38 38;
+    --input: 38 38 38;
+    --ring: 255 255 255;
 
-    --sidebar-background: 2 6 23;
+    --sidebar-background: 23 23 23;
     --sidebar-foreground: 148 163 184;
-    --sidebar-primary: 59 130 246;
-    --sidebar-primary-foreground: 15 23 42;
-    --sidebar-accent: 30 41 59;
-    --sidebar-accent-foreground: 248 250 252;
-    --sidebar-border: 30 41 59;
-    --sidebar-ring: 59 130 246;
+    --sidebar-primary: 255 255 255;
+    --sidebar-primary-foreground: 23 23 23;
+    --sidebar-accent: 38 38 38;
+    --sidebar-accent-foreground: 255 255 255;
+    --sidebar-border: 38 38 38;
+    --sidebar-ring: 255 255 255;
   }
 }
 
@@ -93,28 +93,37 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
 @layer components {
-  .gradient-ai {
-    background: linear-gradient(135deg, rgb(59 130 246) 0%, rgb(168 85 247) 50%, rgb(6 182 212) 100%);
+  .gradient-minimal {
+    background: linear-gradient(135deg, rgb(23 23 23) 0%, rgb(64 64 64) 100%);
   }
   
-  .text-gradient {
-    background: linear-gradient(135deg, rgb(59 130 246), rgb(168 85 247));
+  .text-gradient-minimal {
+    background: linear-gradient(135deg, rgb(23 23 23), rgb(115 115 115));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .hover-lift {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   
   .hover-lift:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  }
+
+  .minimal-card {
+    @apply bg-card border border-border rounded-lg p-6 hover-lift;
+  }
+
+  .section-spacing {
+    @apply py-16 lg:py-24;
   }
 }

@@ -8,110 +8,96 @@ import { Phone, Mail, MapPin } from 'lucide-react';
 
 const ContactSection = () => {
   return (
-    <section id="contato" className="py-16 lg:py-24 bg-gradient-to-br from-ai-blue-50 to-ai-purple-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Pronto para <span className="text-gradient">revolucionar</span> seu negócio?
+    <section id="contato" className="section-spacing bg-background">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+            Pronto para revolucionar seu negócio?
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Entre em contato conosco e descubra como a inteligência artificial pode transformar sua empresa.
+          <p className="text-xl text-muted-foreground leading-relaxed">
+            Entre em contato e descubra como a inteligência artificial pode transformar sua empresa.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {/* Contact Form */}
-          <Card className="shadow-lg border-0 bg-background/80 backdrop-blur-sm">
+          <Card className="minimal-card">
             <CardHeader>
               <CardTitle className="text-2xl font-bold text-center">
-                Solicite uma consultoria gratuita
+                Consultoria gratuita
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Nome completo</Label>
-                  <Input id="name" placeholder="Seu nome" />
+                  <Label htmlFor="name" className="text-sm font-medium">Nome completo</Label>
+                  <Input id="name" placeholder="Seu nome" className="border-border" />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="company">Empresa</Label>
-                  <Input id="company" placeholder="Nome da empresa" />
+                  <Label htmlFor="company" className="text-sm font-medium">Empresa</Label>
+                  <Input id="company" placeholder="Nome da empresa" className="border-border" />
                 </div>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="email">E-mail</Label>
-                  <Input id="email" type="email" placeholder="seu@email.com" />
+                  <Label htmlFor="email" className="text-sm font-medium">E-mail</Label>
+                  <Input id="email" type="email" placeholder="seu@email.com" className="border-border" />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="phone">WhatsApp</Label>
-                  <Input id="phone" placeholder="(11) 99999-9999" />
+                  <Label htmlFor="phone" className="text-sm font-medium">WhatsApp</Label>
+                  <Input id="phone" placeholder="(11) 99999-9999" className="border-border" />
                 </div>
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="message">Descreva seu projeto</Label>
+                <Label htmlFor="message" className="text-sm font-medium">Descreva seu projeto</Label>
                 <Textarea 
                   id="message" 
                   placeholder="Conte-nos sobre seu negócio e como podemos ajudar..."
-                  className="min-h-[100px]"
+                  className="min-h-[100px] border-border"
                 />
               </div>
 
-              <Button className="w-full gradient-ai text-white hover:opacity-90 transition-opacity">
+              <Button className="w-full bg-foreground text-background hover:bg-foreground/90 transition-colors font-medium">
                 Enviar solicitação
               </Button>
             </CardContent>
           </Card>
 
           {/* Contact Info */}
-          <div className="space-y-8">
-            <Card className="shadow-lg border-0 bg-background/80 backdrop-blur-sm">
-              <CardContent className="p-8">
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-12 h-12 gradient-ai rounded-lg flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-white" />
+          <div className="space-y-6">
+            {[
+              { icon: Phone, title: 'Telefone', info: '(11) 99999-9999' },
+              { icon: Mail, title: 'E-mail', info: 'contato@agenciaai.com.br' },
+              { icon: MapPin, title: 'Localização', info: 'São Paulo, SP - Brasil' }
+            ].map((contact, index) => (
+              <Card key={index} className="minimal-card">
+                <CardContent className="p-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
+                      <contact.icon className="w-5 h-5 text-foreground" />
+                    </div>
+                    <div>
+                      <h3 className="font-medium text-foreground">{contact.title}</h3>
+                      <p className="text-muted-foreground text-sm">{contact.info}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-lg">Telefone</h3>
-                    <p className="text-muted-foreground">(11) 99999-9999</p>
-                  </div>
-                </div>
+                </CardContent>
+              </Card>
+            ))}
 
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-12 h-12 gradient-ai rounded-lg flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg">E-mail</h3>
-                    <p className="text-muted-foreground">contato@agenciaai.com.br</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 gradient-ai rounded-lg flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg">Localização</h3>
-                    <p className="text-muted-foreground">São Paulo, SP - Brasil</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-lg border-0 bg-gradient-to-r from-ai-blue-500 to-ai-purple-500 text-white">
+            <Card className="minimal-card bg-foreground text-background">
               <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold mb-4">
+                <h3 className="text-xl font-bold mb-4">
                   Atendimento 24/7 com IA
                 </h3>
-                <p className="mb-6 opacity-90">
-                  Nossa própria IA está disponível para tirar dúvidas e agendar reuniões a qualquer momento.
+                <p className="mb-6 opacity-90 text-sm">
+                  Nossa IA está disponível para tirar dúvidas e agendar reuniões a qualquer momento.
                 </p>
                 <Button 
                   variant="secondary" 
-                  className="bg-white text-ai-blue-600 hover:bg-gray-100"
+                  className="bg-background text-foreground hover:bg-background/90 font-medium"
                 >
                   Conversar agora
                 </Button>
