@@ -8,82 +8,82 @@
 @layer base {
   :root {
     --background: 255 255 255;
-    --foreground: 7 10 19;
+    --foreground: 30 58 138;
 
     --card: 255 255 255;
-    --card-foreground: 7 10 19;
+    --card-foreground: 30 58 138;
 
     --popover: 255 255 255;
-    --popover-foreground: 7 10 19;
+    --popover-foreground: 30 58 138;
 
-    --primary: 7 10 19;
+    --primary: 30 58 138;
     --primary-foreground: 255 255 255;
 
-    --secondary: 245 245 245;
-    --secondary-foreground: 7 10 19;
+    --secondary: 239 246 255;
+    --secondary-foreground: 30 58 138;
 
-    --muted: 245 245 245;
-    --muted-foreground: 115 115 115;
+    --muted: 248 250 252;
+    --muted-foreground: 100 116 139;
 
-    --accent: 245 245 245;
-    --accent-foreground: 7 10 19;
+    --accent: 219 234 254;
+    --accent-foreground: 30 58 138;
 
     --destructive: 239 68 68;
     --destructive-foreground: 248 250 252;
 
-    --border: 229 229 229;
-    --input: 229 229 229;
-    --ring: 7 10 19;
+    --border: 226 232 240;
+    --input: 226 232 240;
+    --ring: 59 130 246;
 
     --radius: 0.5rem;
 
     --sidebar-background: 255 255 255;
     --sidebar-foreground: 51 65 85;
-    --sidebar-primary: 7 10 19;
+    --sidebar-primary: 30 58 138;
     --sidebar-primary-foreground: 248 250 252;
-    --sidebar-accent: 241 245 249;
-    --sidebar-accent-foreground: 7 10 19;
+    --sidebar-accent: 239 246 255;
+    --sidebar-accent-foreground: 30 58 138;
     --sidebar-border: 226 232 240;
-    --sidebar-ring: 37 99 235;
+    --sidebar-ring: 59 130 246;
   }
 
   .dark {
-    --background: 7 10 19;
-    --foreground: 255 255 255;
+    --background: 15 23 42;
+    --foreground: 241 245 249;
 
-    --card: 7 10 19;
-    --card-foreground: 255 255 255;
+    --card: 30 41 59;
+    --card-foreground: 241 245 249;
 
-    --popover: 7 10 19;
-    --popover-foreground: 255 255 255;
+    --popover: 30 41 59;
+    --popover-foreground: 241 245 249;
 
-    --primary: 255 255 255;
-    --primary-foreground: 7 10 19;
+    --primary: 59 130 246;
+    --primary-foreground: 15 23 42;
 
-    --secondary: 20 24 35;
-    --secondary-foreground: 255 255 255;
+    --secondary: 51 65 85;
+    --secondary-foreground: 241 245 249;
 
-    --muted: 20 24 35;
-    --muted-foreground: 163 163 163;
+    --muted: 51 65 85;
+    --muted-foreground: 148 163 184;
 
-    --accent: 20 24 35;
-    --accent-foreground: 255 255 255;
+    --accent: 51 65 85;
+    --accent-foreground: 241 245 249;
 
     --destructive: 185 28 28;
     --destructive-foreground: 248 250 252;
 
-    --border: 20 24 35;
-    --input: 20 24 35;
-    --ring: 255 255 255;
+    --border: 51 65 85;
+    --input: 51 65 85;
+    --ring: 59 130 246;
 
-    --sidebar-background: 7 10 19;
+    --sidebar-background: 15 23 42;
     --sidebar-foreground: 148 163 184;
-    --sidebar-primary: 255 255 255;
-    --sidebar-primary-foreground: 7 10 19;
-    --sidebar-accent: 20 24 35;
-    --sidebar-accent-foreground: 255 255 255;
-    --sidebar-border: 20 24 35;
-    --sidebar-ring: 255 255 255;
+    --sidebar-primary: 59 130 246;
+    --sidebar-primary-foreground: 15 23 42;
+    --sidebar-accent: 51 65 85;
+    --sidebar-accent-foreground: 241 245 249;
+    --sidebar-border: 51 65 85;
+    --sidebar-ring: 59 130 246;
   }
 }
 
@@ -100,11 +100,11 @@
 
 @layer components {
   .gradient-minimal {
-    background: linear-gradient(135deg, rgb(7 10 19) 0%, rgb(64 64 64) 100%);
+    background: linear-gradient(135deg, rgb(30 58 138) 0%, rgb(59 130 246) 100%);
   }
   
   .text-gradient-minimal {
-    background: linear-gradient(135deg, rgb(7 10 19), rgb(115 115 115));
+    background: linear-gradient(135deg, rgb(30 58 138), rgb(59 130 246));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -116,7 +116,7 @@
   
   .hover-lift:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.12);
   }
 
   .minimal-card {
