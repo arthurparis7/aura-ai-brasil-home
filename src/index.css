@@ -8,81 +8,81 @@
 @layer base {
   :root {
     --background: 255 255 255;
-    --foreground: 23 23 23;
+    --foreground: 7 10 19;
 
     --card: 255 255 255;
-    --card-foreground: 23 23 23;
+    --card-foreground: 7 10 19;
 
     --popover: 255 255 255;
-    --popover-foreground: 23 23 23;
+    --popover-foreground: 7 10 19;
 
-    --primary: 23 23 23;
+    --primary: 7 10 19;
     --primary-foreground: 255 255 255;
 
     --secondary: 245 245 245;
-    --secondary-foreground: 23 23 23;
+    --secondary-foreground: 7 10 19;
 
     --muted: 245 245 245;
     --muted-foreground: 115 115 115;
 
     --accent: 245 245 245;
-    --accent-foreground: 23 23 23;
+    --accent-foreground: 7 10 19;
 
     --destructive: 239 68 68;
     --destructive-foreground: 248 250 252;
 
     --border: 229 229 229;
     --input: 229 229 229;
-    --ring: 23 23 23;
+    --ring: 7 10 19;
 
     --radius: 0.5rem;
 
     --sidebar-background: 255 255 255;
     --sidebar-foreground: 51 65 85;
-    --sidebar-primary: 15 23 42;
+    --sidebar-primary: 7 10 19;
     --sidebar-primary-foreground: 248 250 252;
     --sidebar-accent: 241 245 249;
-    --sidebar-accent-foreground: 15 23 42;
+    --sidebar-accent-foreground: 7 10 19;
     --sidebar-border: 226 232 240;
     --sidebar-ring: 37 99 235;
   }
 
   .dark {
-    --background: 23 23 23;
+    --background: 7 10 19;
     --foreground: 255 255 255;
 
-    --card: 23 23 23;
+    --card: 7 10 19;
     --card-foreground: 255 255 255;
 
-    --popover: 23 23 23;
+    --popover: 7 10 19;
     --popover-foreground: 255 255 255;
 
     --primary: 255 255 255;
-    --primary-foreground: 23 23 23;
+    --primary-foreground: 7 10 19;
 
-    --secondary: 38 38 38;
+    --secondary: 20 24 35;
     --secondary-foreground: 255 255 255;
 
-    --muted: 38 38 38;
+    --muted: 20 24 35;
     --muted-foreground: 163 163 163;
 
-    --accent: 38 38 38;
+    --accent: 20 24 35;
     --accent-foreground: 255 255 255;
 
     --destructive: 185 28 28;
     --destructive-foreground: 248 250 252;
 
-    --border: 38 38 38;
-    --input: 38 38 38;
+    --border: 20 24 35;
+    --input: 20 24 35;
     --ring: 255 255 255;
 
-    --sidebar-background: 23 23 23;
+    --sidebar-background: 7 10 19;
     --sidebar-foreground: 148 163 184;
     --sidebar-primary: 255 255 255;
-    --sidebar-primary-foreground: 23 23 23;
-    --sidebar-accent: 38 38 38;
+    --sidebar-primary-foreground: 7 10 19;
+    --sidebar-accent: 20 24 35;
     --sidebar-accent-foreground: 255 255 255;
-    --sidebar-border: 38 38 38;
+    --sidebar-border: 20 24 35;
     --sidebar-ring: 255 255 255;
   }
 }
@@ -100,11 +100,11 @@
 
 @layer components {
   .gradient-minimal {
-    background: linear-gradient(135deg, rgb(23 23 23) 0%, rgb(64 64 64) 100%);
+    background: linear-gradient(135deg, rgb(7 10 19) 0%, rgb(64 64 64) 100%);
   }
   
   .text-gradient-minimal {
-    background: linear-gradient(135deg, rgb(23 23 23), rgb(115 115 115));
+    background: linear-gradient(135deg, rgb(7 10 19), rgb(115 115 115));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
